@@ -1,4 +1,4 @@
-# CarSharing Report
+# CarSharing Report with SQL Queries 
 
 ## 2017 Car-Sharing Demand & Weather Analysis
 
@@ -81,27 +81,15 @@ The detailed SQL output tables are stored in the project's Google Drive folder.
 
 These tables provide the underlying results used in the final report.
 
-### Result Tables
-
-* [Highest Demand in 2017](PASTE-GOOGLE-DRIVE-LINK-HERE)
-* [Demand by Weekday](PASTE-GOOGLE-DRIVE-LINK-HERE)
-* [Demand by Month](PASTE-GOOGLE-DRIVE-LINK-HERE)
-* [Demand by Season](PASTE-GOOGLE-DRIVE-LINK-HERE)
-* [Hourly Demand](PASTE-GOOGLE-DRIVE-LINK-HERE)
-* [Temperature Category Analysis](PASTE-GOOGLE-DRIVE-LINK-HERE)
-* [Weather Condition Analysis](PASTE-GOOGLE-DRIVE-LINK-HERE)
-* [Demand by Temperature Category](PASTE-GOOGLE-DRIVE-LINK-HERE)
-* [Monthly Windspeed Analysis](PASTE-GOOGLE-DRIVE-LINK-HERE)
-* [Monthly Humidity Analysis](PASTE-GOOGLE-DRIVE-LINK-HERE)
-* [July Demand and Weather Analysis](PASTE-GOOGLE-DRIVE-LINK)
-
+### Result Tables & Charts
+https://docs.google.com/spreadsheets/d/15tEpvJpRut1xnPzOHVSc96I16TxdRfw-g2yY2m0XVEk/edit?usp=drive_link
 ---
 
 ## Final Report
 
 The complete analytical report provides detailed findings, visualizations, interpretation, and marketing recommendations.
 
-**[View the Final CarSharing 2017 Report]https://eu.docworkspace.com/d/sbRadilaDYIdCpxr_wh6vsp2vw5u3wl6v0x?sa=601.1037 **
+https://drive.google.com/file/d/1fFRTVBks-hq9--82rt1oX-3rFBqf8O0G/view?usp=drive_link
 
 ---
 
@@ -117,7 +105,6 @@ The queries cover data exploration, demand analysis, time-based analysis, weathe
 
 * **SQL** - Data exploration and analysis
 * **Google Sheets** - Supporting analysis tables
-* **Power BI** - Data visualization and dashboard development
 * **GitHub** - SQL code and project documentation
 
 ---
