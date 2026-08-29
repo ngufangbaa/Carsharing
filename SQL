@@ -1,0 +1,74 @@
+A. Highest demand
+SELECT t.timestamp, c.demand
+FROM CarSharing_df c
+JOIN time t ON c.id = t.id
+WHERE YEAR(STR_TO_DATE(t.timestamp, '%Y-%m-%d %H:%i:%s')) = 2017
+ORDER BY c.demand DESC
+LIMIT 1;
+
+
+B. Weekday averages
+SELECT t.`weekday name`, ROUND(AVG(c.demand), 2) AS average_demand
+FROM CarSharing_df c JOIN time t ON c.id = t.id
+GROUP BY t.`weekday name` ORDER BY average_demand DESC;
+
+B. Month averages
+SELECT t.month, ROUND(AVG(c.demand), 2) AS average_demand
+FROM CarSharing_df c JOIN time t ON c.id = t.id
+GROUP BY t.month ORDER BY average_demand DESC;
+
+B. Season averages
+SELECT t.season, ROUND(AVG(c.demand), 2) AS average_demand
+FROM CarSharing_df c JOIN time t ON c.id = t.id
+GROUP BY t.season ORDER BY average_demand DESC;
+
+C. Selected weekdays by hour
+SELECT t.`weekday name`, t.hour, ROUND(AVG(c.demand), 2) AS average_demand
+FROM CarSharing_df c JOIN time t ON c.id = t.id
+WHERE t.`weekday name` IN ('Saturday', 'Thursday')
+GROUP BY t.`weekday name`, t.hour ORDER BY average_demand DESC;
+
+D1. Temperature prevalence
+SELECT temp.temp_category, COUNT(*) AS number_of_records,
+ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (), 2) AS percentage
+FROM CarSharing_df c JOIN time t ON c.id = t.id
+JOIN temperature temp ON c.temp_code = temp.temp_code
+GROUP BY temp.temp_category ORDER BY number_of_records DESC;
+
+D2. Weather prevalence
+SELECT w.weather, COUNT(*) AS number_of_records,
+ROUND(COUNT(*) * 100.0 / SUM(COUNT(*)) OVER (), 2) AS percentage
+FROM CarSharing_df c JOIN time t ON c.id = t.id
+JOIN weather w ON c.weather_code = w.weather_code
+GROUP BY w.weather ORDER BY number_of_records DESC;
+
+D3. Monthly wind speed
+SELECT t.month, ROUND(AVG(c.windspeed), 2) AS average_windspeed,
+ROUND(MAX(c.windspeed), 2) AS highest_windspeed, ROUND(MIN(c.windspeed), 2) AS lowest_windspeed
+FROM CarSharing_df c JOIN time t ON c.id = t.id
+GROUP BY t.month ORDER BY average_windspeed DESC;
+
+D4. Monthly humidity
+SELECT t.month, ROUND(AVG(c.humidity), 2) AS average_humidity,
+ROUND(MAX(c.humidity), 2) AS highest_humidity, ROUND(MIN(c.humidity), 2) AS lowest_humidity
+FROM CarSharing_df c JOIN time t ON c.id = t.id
+GROUP BY t.month ORDER BY average_humidity DESC;
+
+D5. Demand by temperature
+SELECT temp.temp_category, ROUND(AVG(c.demand), 2) AS average_demand
+FROM CarSharing_df c JOIN time t ON c.id = t.id
+JOIN temperature temp ON c.temp_code = temp.temp_code
+GROUP BY temp.temp_category ORDER BY average_demand DESC;
+
+E. July analysis
+SELECT t.month, ROUND(AVG(c.demand), 2) AS average_demand,
+temp.temp_category, w.weather, ROUND(AVG(c.windspeed), 2) AS average_windspeed,
+ROUND(MAX(c.windspeed), 2) AS highest_windspeed, ROUND(MIN(c.windspeed), 2) AS lowest_windspeed,
+ROUND(AVG(c.humidity), 2) AS average_humidity, ROUND(MAX(c.humidity), 2) AS highest_humidity,
+ROUND(MIN(c.humidity), 2) AS lowest_humidity
+FROM CarSharing_df c JOIN time t ON c.id = t.id
+JOIN temperature temp ON c.temp_code = temp.temp_code
+JOIN weather w ON c.weather_code = w.weather_code
+WHERE t.month = 'July'
+GROUP BY t.month, temp.temp_category, w.weather
+ORDER BY average_demand DESC;
