@@ -67,24 +67,11 @@ The findings suggest opportunities to:
 
 ## Repository Structure
 
-```text
 CarSharing Report/
 │
 ├── README.md
-│
 ├── SQL/
-│   ├── 01_data_exploration.sql
-│   ├── 02_demand_analysis.sql
-│   ├── 03_time_analysis.sql
-│   ├── 04_weather_analysis.sql
-│   └── 05_marketing_analysis.sql
-│
-├── Report/
-│   └── CarSharing_2017_Demand_Weather_Report.pdf
-│
-└── Documentation/
-    └── data_dictionary.md
-```
+└── Report/
 
 ---
 
