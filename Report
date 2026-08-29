@@ -1,0 +1,140 @@
+CARSHARING 2017 DEMAND & WEATHER REPORT
+SQL Analysis Report for the Marketing Team
+Database: carsharing | Analysis period: 2017
+Executive Summary
+
+The 2017 CarSharing analysis identified clear patterns in demand across time, weekday, month, season and temperature. The highest single demand rate was 6.46 on 15 June 2017 at 17:00. Saturday had the highest average weekday demand at 4.61, July had the highest monthly average at 4.91, and Fall had the highest seasonal average at 4.77.
+Mild conditions were the most prevalent temperature category at 48.64%, while Clear or partly cloudy was the most prevalent weather condition at 67.28%. Despite Mild weather being most common, Hot conditions produced the highest average demand at 4.97. These findings provide useful guidance for demand-focused marketing and operational planning.
+1. Highest Demand in 2017
+Date	Time	Highest demand
+15 June 2017	17:00	6.46
+The highest recorded demand rate in 2017 occurred on 15 June 2017 at 17:00, with a demand rate of 6.46.
+2. Highest and Lowest Average Demand
+Category	Highest	Average demand	Lowest	Average demand
+Weekday	Saturday	4.61	Thursday	4.35
+Month	July	4.91	January	3.79
+Season	Fall	4.77	Spring	3.98
+Saturday was the strongest weekday, while Thursday was the weakest. July was the strongest month and January the weakest. Fall had the highest seasonal average, while Spring had the lowest.
+3. Hourly Demand for Selected Weekdays
+Weekday	Hour	Average demand
+Thursday	17	6.01
+Saturday	17	5.99
+Thursday	8	5.97
+Thursday	18	5.92
+Saturday	18	5.82
+Saturday	16	5.67
+Saturday	8	5.64
+Thursday	19	5.58
+Saturday	19	5.51
+Saturday	15	5.44
+Saturday	13	5.44
+Saturday	12	5.39
+Thursday	7	5.38
+Saturday	9	5.37
+Saturday	14	5.37
+Thursday	16	5.34
+Thursday	9	5.27
+Thursday	20	5.26
+Saturday	11	5.19
+Saturday	20	5.18
+Saturday	10	5.04
+Saturday	21	4.96
+Thursday	12	4.96
+Thursday	15	4.96
+Thursday	13	4.93
+Thursday	21	4.91
+Saturday	7	4.89
+Thursday	14	4.86
+Saturday	22	4.86
+Thursday	11	4.71
+Thursday	10	4.63
+Thursday	22	4.62
+Saturday	23	4.61
+Thursday	6	4.39
+Thursday	23	4.11
+Saturday	6	3.95
+Saturday	0	3.83
+Thursday	0	3.2
+Saturday	1	3.13
+Thursday	5	2.79
+Saturday	2	2.67
+Saturday	5	2.61
+Thursday	1	2.27
+Saturday	3	1.94
+Thursday	2	1.6
+Saturday	4	1.51
+Thursday	3	1.23
+Thursday	4	1.09
+
+Both selected weekdays peaked at 17:00. Thursday reached 6.01 and Saturday 5.99. The lowest demand was at 04:00 on both days, at 1.09 for Thursday and 1.51 for Saturday. This indicates a strong late-afternoon/early-evening demand window and weak overnight demand.
+4. Weather Analysis
+4.1 Temperature Category
+Category	Records	Percentage
+Mild	4,071	48.64%
+Hot	3,746	44.76%
+Cold	553	6.61%
+Mild was the predominant temperature category. However, Hot conditions were nearly as frequent and, as shown later, generated the highest average demand.
+4.2 Most Prevalent Weather Condition
+Weather condition	Records	Percentage
+Clear or partly cloudy	5,699	67.28%
+Mist	2,090	24.67%
+Light snow or rain	681	8.04%
+Heavy rain/ice pellets/snow + fog	1	0.01%
+Clear or partly cloudy conditions were overwhelmingly the most common, representing 67.28% of observations.
+4.3 Monthly Wind Speed
+Month	Average wind speed	Highest	Lowest
+April	15.57	48	0
+March	15.37	46	0
+January	14.55	44	0
+February	14.03	52	0
+August	12.47	43	0
+May	12.35	41	0
+June	12.28	39	0
+November	12.1	37	0
+September	11.58	41	0
+July	11.02	57	0
+October	10.89	37	0
+December	10.8	43	0
+April had the highest average wind speed at 15.57, while December had the lowest at 10.80. July recorded the highest individual wind speed, 57. The minimum was 0 in every month.
+4.4 Monthly Humidity
+Month	Average humidity	Highest	Lowest
+September	74.85	100	42
+October	71.62	100	29
+May	68.18	100	21
+December	65.13	100	26
+November	64.19	100	27
+August	62.6	94	25
+June	58.86	100	20
+July	58.31	94	17
+March	56.76	100	0
+February	56.02	100	8
+January	55.88	100	25
+April	55.66	100	16
+September had the highest average humidity at 74.85, while April had the lowest at 55.66. Maximum humidity reached 100 in most months. March had the lowest individual humidity value, 0.
+4.5 Average Demand by Temperature Category
+Temperature category	Average demand
+Hot	4.97
+Mild	4.13
+Cold	3.37
+Hot conditions generated the highest average demand at 4.97, followed by Mild at 4.13 and Cold at 3.37. This is a key marketing insight: Mild conditions were most common, but Hot conditions were associated with the strongest average demand.
+5. Highest-Demand Month: July
+Month	Avg demand	Temp category	Weather	Avg wind	Max wind	Min wind	Avg humidity	Max humidity	Min humidity
+July	4.94	Hot	Clear or partly cloudy	11.05	33	0	56.31	94	17
+July	4.93	Hot	Mist	9.15	28	0	63.39	94	24
+July	4.43	Hot	Light snow or rain	17.81	57	0	74.22	94	35
+July had the highest overall monthly average demand at 4.91. Within the July breakdown, Hot conditions were recorded across the reported weather categories. Clear or partly cloudy weather had the highest average demand at 4.94, closely followed by Mist at 4.93. Light snow or rain had the lowest of the three at 4.43 and also the highest average wind speed, 17.81, and highest recorded wind speed, 57. Its average humidity was also highest at 74.22.
+6. Marketing Interpretation and Recommendations
+Target the 17:00 period: Both Saturday and Thursday recorded their highest hourly average demand at 17:00. Marketing offers, vehicle availability and customer engagement should be strong around this period.
+Prioritize warmer conditions: Hot weather had the highest average demand at 4.97, despite Mild being the most prevalent category. Weather-based promotions can therefore be especially valuable during warmer periods.
+Focus on July and Fall: July recorded the highest monthly average demand at 4.91, while Fall was the strongest season at 4.77.
+Use clear-weather opportunities: Clear or partly cloudy weather represented 67.28% of observations. This is the dominant environment in which the service operates and should be considered in campaign planning.
+Reduce emphasis during overnight lows: Demand was particularly weak around 03:00-05:00 on the selected weekdays. Promotional and operational resources could be reduced during these periods.
+Monitor weather variability: July illustrates that demand differs across weather conditions, so campaigns can be adjusted according to weather forecasts rather than relying solely on calendar periods.
+Conclusion
+The 2017 analysis indicates that demand was strongest during warmer conditions, in July, during Fall, and around the 17:00 period. Saturday was the strongest weekday by average demand. The weather environment was predominantly Mild and Clear or partly cloudy, while Hot conditions generated the highest average demand. These findings can help the marketing team schedule campaigns around high-demand periods, tailor promotions to warmer weather, and manage resources more efficiently during low-demand overnight periods.
+
+Links
+GitHub
+https://github.com/ngufangbaa/Carsharing
+Tables and Charts
+https://docs.google.com/spreadsheets/d/1GaL_EsdbOOnYIom4jwJyB0oXiSwGpGz_O9k2AfW6YQk/edit?usp=sharing
